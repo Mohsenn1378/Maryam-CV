@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>وایرفریم v1 — سایت مریم رجبیان</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.css" rel="stylesheet">
+<style>
+  :root{--ink:#1d1d1f;--mute:#6b6b70;--line:#c9c9ce;--fill:#ececef;--paper:#fafafa;--note:#fff6c9;--noteb:#e2c84a;--acc:#3a3a3f}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Vazirmatn,system-ui,sans-serif;background:#e9e9ec;color:var(--ink);line-height:1.7}
+  .bar{position:sticky;top:0;z-index:9;background:#222;color:#fff;padding:10px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:14px}
+  .bar b{margin-inline-end:auto}
+  .bar button{font:inherit;background:#444;color:#fff;border:0;border-radius:6px;padding:6px 12px;cursor:pointer}
+  .bar button[aria-pressed="true"]{background:#fff;color:#222}
+  .frame{max-width:1120px;margin:20px auto;background:var(--paper);border:1px solid var(--line);transition:max-width .3s}
+  body.mobile .frame{max-width:390px}
+  section,header,footer{position:relative;border-bottom:1px dashed var(--line);padding:40px 48px}
+  body.mobile section,body.mobile header,body.mobile footer{padding:28px 18px}
+  .tag{position:absolute;top:8px;inset-inline-end:10px;font-size:11px;color:var(--mute);letter-spacing:.04em}
+  .box{background:var(--fill);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:13px;text-align:center;padding:8px}
+  .btn{display:inline-block;border:2px solid var(--acc);border-radius:8px;padding:8px 18px;font-weight:600;font-size:14px}
+  .btn.p{background:var(--acc);color:#fff}
+  .ph{background:#dedee3;border-radius:4px;padding:0 6px;color:#555}
+  .row{display:flex;gap:16px;flex-wrap:wrap}
+  .grid{display:grid;gap:16px}
+  .g4{grid-template-columns:repeat(4,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  body.mobile .g4{grid-template-columns:repeat(2,1fr)} body.mobile .g3,body.mobile .g2{grid-template-columns:1fr}
+  @media (max-width:760px){.g4{grid-template-columns:repeat(2,1fr)}.g3,.g2{grid-template-columns:1fr}section,header,footer{padding:28px 16px}
+    .frame{margin:0;border-inline:0}nav.top .links{display:none}.burger{display:block!important;margin-inline-start:auto}h1{font-size:24px}#bm{display:none}}
+  .btn{white-space:nowrap}
+  nav.top{flex-wrap:wrap}
+  h1{font-size:34px;line-height:1.35;margin:10px 0}
+  body.mobile h1{font-size:24px}
+  h2{font-size:20px;margin:0 0 16px}
+  .chip{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:2px 12px;font-size:13px;background:#fff}
+  .card{border:1px solid var(--line);border-radius:10px;padding:16px;background:#fff}
+  .card h3{font-size:16px;margin:8px 0}
+  .muted{color:var(--mute);font-size:13px}
+  .note{background:var(--note);border:1px solid var(--noteb);border-radius:8px;padding:10px 14px;font-size:13px;margin-top:18px}
+  .note::before{content:"چرا؟ ";font-weight:700}
+  body.nonotes .note{display:none}
+  .tl{border-inline-start:3px solid var(--line);padding-inline-start:16px;display:grid;gap:14px}
+  ul{margin:6px 0;padding-inline-start:20px}
+  nav.top{display:flex;align-items:center;gap:18px;font-size:14px}
+  nav.top .links{display:flex;gap:16px;margin-inline-start:auto}
+  body.mobile nav.top .links{display:none}
+  .burger{display:none}
+  body.mobile .burger{display:block;margin-inline-start:auto}
+  .num{font-size:28px;font-weight:800}
+  .legend{max-width:1120px;margin:0 auto 30px;padding:0 4px;font-size:13px;color:#444}
+</style>
+</head>
+<body>
+<div class="bar">
+  <b>وایرفریم v1 · سایت مریم رجبیان (نسخه فارسی/RTL)</b>
+  <button id="bm" aria-pressed="false">نمای موبایل</button>
+  <button id="bn" aria-pressed="true">نمایش «چرا؟»ها</button>
+</div>
+
+<div class="frame">
+
+<header>
+  <span class="tag">S1 · هدر چسبان</span>
+  <nav class="top">
+    <strong>مریم رجبیان</strong>
+    <span class="links"><span>نمونه‌کار</span><span>سوابق</span><span>چطور کار می‌کنم</span><span>تماس</span></span>
+    <span class="chip">EN | فا</span>
+    <span class="btn">دانلود رزومه ↓</span>
+    <span class="burger box" style="width:40px;height:32px">☰</span>
+  </nav>
+  <div class="note">رزومه از هر جای صفحه با یک کلیک (معیار C9). منو فقط ۴ آیتم؛ بیشتر از این، تصمیم‌گیری را کند می‌کند (قانون هیک). در موبایل منو جمع می‌شود ولی دکمه رزومه می‌ماند.</div>
+</header>
+
+<section>
+  <span class="tag">S2 · هیرو (بالای صفحه)</span>
+  <div class="row" style="align-items:center;gap:32px">
+    <div class="box" style="width:150px;height:150px;border-radius:50%">عکس حرفه‌ای<br>(نیم‌تنه، پس‌زمینه ساده)</div>
+    <div style="flex:1;min-width:240px">
+      <span class="chip">● آماده همکاری در نقش مدیر محصول · دورکار / مشهد</span>
+      <h1>فرایندهای پیچیده را به محصولی تبدیل می‌کنم که تیم‌ها واقعاً از آن استفاده کنند.</h1>
+      <p class="muted" style="font-size:15px">مدیر محصول · B2B SaaS و هوش مصنوعی · <span class="ph">⟦X⟧</span> سال تجربه در پیام‌رسانی سازمانی، APIهای منابع انسانی و پلتفرم‌های BPM</p>
+      <div class="row"><span class="btn p">دانلود رزومه</span><span class="btn">نمونه‌کارها ↓</span></div>
+      <p class="muted">لینکدین · ایمیل</p>
+    </div>
+  </div>
+  <div class="note">در ۷ ثانیه اول ریکروتر باید بفهمد: کیست، چه نقشی، چه حوزه‌ای، دنبال کار هست یا نه (C1). تیتر «فعل + نتیجه» است نه «عنوان شغلی»؛ عنوان شغلی در زیرتیتر آمده تا ATS و ریکروتر هم ببینند. برخلاف نمونه ابوالفضل، «درباره من» کلی اینجا نیست.</div>
+</section>
+
+<section>
+  <span class="tag">S3 · نوار اثبات</span>
+  <div class="grid g4">
+    <div class="card"><div class="num ph">⟦٪⟧</div><div class="muted">نتیجه کلیدی در Inboxino</div></div>
+    <div class="card"><div class="num ph">⟦…⟧</div><div class="muted">نتیجه کلیدی در MagicalAPI</div></div>
+    <div class="card"><div class="num">۱۰ / ۷۴</div><div class="muted">رتبه تیم در هکاتون Agentic AI استارکوچ</div></div>
+    <div class="card"><div class="num">۶+</div><div class="muted">سال، از PMO تا مدیر محصول</div></div>
+  </div>
+  <div class="note">فقط عدد «خروجی» (نتیجه)، نه عدد «ورودی» مثل تعداد پروژه (ضدالگوی دیده‌شده در بنچمارک). الگو از raminkhaligh.ir. اگر کمتر از ۳ عدد واقعی داشتیم، این نوار ۳تایی می‌شود.</div>
+</section>
+
+<section>
+  <span class="tag">S4 · نمونه‌کارهای منتخب</span>
+  <h2>نمونه‌کارهای منتخب</h2>
+  <div class="grid g3">
+    <div class="card"><div class="box" style="height:120px">تصویر محصول / نمودار نتیجه</div><h3><span class="ph">⟦افزایش X به میزان Y٪⟧</span> در پلتفرم ارسال پیام چندکاناله</h3><div class="muted">Inboxino · مدیر محصول · ۲۰۲۵</div><p class="muted">#B2B_SaaS #Discovery</p><span class="btn">خواندن کیس ←</span></div>
+    <div class="card"><div class="box" style="height:120px">تصویر API / داشبورد</div><h3><span class="ph">⟦…⟧</span> برای APIهای هوش مصنوعی تحلیل رزومه</h3><div class="muted">MagicalAPI · Product Owner · ریموت · ۲۰۲۳–۲۴</div><p class="muted">#API #AI</p><span class="btn">خواندن کیس ←</span></div>
+    <div class="card"><div class="box" style="height:120px">عکس تیم / گواهی</div><h3>مدیریت محصول ۳ چالش ایجنت هوش مصنوعی (والکس، ترب، لیارا)</h3><div class="muted">هکاتون استارکوچ · PM تیم · ۲۰۲۶</div><p class="muted">#Agentic_AI #Hackathon</p><span class="btn">خواندن کیس ←</span></div>
+  </div>
+  <div class="note">نمونه‌کار قبل از سوابق می‌آید چون پروداکت لید «شاهد» می‌خواهد نه «فهرست». تیتر هر کارت خودش نتیجه است تا حتی بدون کلیک ارزش منتقل شود. فقط ۳ کیس قوی (توصیه مشترک راهنماهای PM). کیس هکاتون گپ زمانی اخیر را هم پر می‌کند.</div>
+</section>
+
+<section>
+  <span class="tag">S6 · سوابق (تایم‌لاین فشرده)</span>
+  <h2>سوابق</h2>
+  <div class="tl">
+    <div><strong>مدیر محصول — Inboxino</strong> <span class="muted">· ژانویه–نوامبر ۲۰۲۵ · مشهد</span><ul><li class="muted">بولت نتیجه‌محور ۱ (فرمول XYZ) <span class="ph">⟦…⟧</span></li><li class="muted">بولت نتیجه‌محور ۲ <span class="ph">⟦…⟧</span></li></ul></div>
+    <div><strong>Product Owner — MagicalAPI</strong> <span class="muted">· ۲۰۲۳–۲۰۲۴ · ریموت</span><ul><li class="muted"><span class="ph">⟦…⟧</span></li><li class="muted"><span class="ph">⟦…⟧</span></li></ul></div>
+    <div><strong>APM — انگیزه نگار خاوران</strong> <span class="muted">· ۲۰۲۲–۲۰۲۳ · مشهد</span><ul><li class="muted"><span class="ph">⟦…⟧</span></li></ul></div>
+    <div><strong>PMO — Navosh</strong> <span class="muted">· ۲۰۲۰–۲۰۲۱</span><ul><li class="muted"><span class="ph">⟦…⟧</span></li></ul></div>
+  </div>
+  <div class="note">هر نقش حداکثر ۲ بولت و همه‌چیز باز است — بدون دکمه «بیشتر» (ریکروتر کلیک نمی‌کند). ترتیب زمانی معکوس، استاندارد ذهنی HR.</div>
+</section>
+
+<section>
+  <span class="tag">S7 · چطور کار می‌کنم</span>
+  <h2>چطور کار می‌کنم</h2>
+  <div class="grid g4">
+    <div class="card"><h3>از فرایند شروع می‌کنم</h3><p class="muted">جریان کار واقعی کاربر را با BPMN مدل می‌کنم.</p></div>
+    <div class="card"><h3>با داده تصمیم می‌گیرم</h3><p class="muted">خودم SQL می‌نویسم.</p></div>
+    <div class="card"><h3>اول کشف، بعد ساخت</h3><p class="muted">مصاحبه کاربر و تست فرضیه.</p></div>
+    <div class="card"><h3>تحویل در چرخه‌های کوچک</h3><p class="muted">اسکرام از دوره PMO.</p></div>
+  </div>
+  <div class="note">جایگزین «نوار درصد مهارت». مهارت را با رفتار نشان می‌دهد و تمایز «PM با ریشه فرایندی» را تقویت می‌کند (C4، C12).</div>
+</section>
+
+<section>
+  <span class="tag">S8+S9 · مهارت‌ها و گواهی‌ها</span>
+  <div class="grid g2">
+    <div><h2>مهارت‌ها و ابزارها</h2><p><span class="chip">Discovery</span> <span class="chip">Roadmap</span> <span class="chip">PRD</span> <span class="chip">BPMN</span> <span class="chip">Scrum</span> <span class="chip">SQL</span> <span class="chip">APIs</span> <span class="chip">AI/LLM</span></p></div>
+    <div><h2>گواهی‌ها و تحصیلات</h2><ul class="muted"><li>هکاتون Agentic AI استارکوچ — ۲۰۲۶ (لینک گواهی)</li><li>مدیریت محصول دیجیتال — مدرسه بوژان — ۲۰۲۳</li><li><span class="ph">⟦مدرک و دانشگاه⟧</span></li></ul></div>
+  </div>
+  <div class="note">چیپ‌ها بدون درصد؛ گروه‌بندی‌شده تا ATS و انسان هر دو سریع اسکن کنند. گواهی با لینک قابل‌راستی‌آزمایی (C7).</div>
+</section>
+
+<section>
+  <span class="tag">S10 · توصیه‌نامه‌ها</span>
+  <div class="grid g2">
+    <div class="card"><p>«<span class="ph">⟦نقل‌قول کوتاه ۲ خطی⟧</span>»</p><div class="muted">نام · نقش · شرکت</div></div>
+    <div class="card"><p>«<span class="ph">⟦نقل‌قول کوتاه ۲ خطی⟧</span>»</p><div class="muted">نام · نقش · شرکت</div></div>
+  </div>
+  <div class="note">ادعای دیگران از ادعای خود فرد معتبرتر است. فقط نقل‌قول واقعی و با اسم — اگر نداشتیم، این بخش حذف می‌شود.</div>
+</section>
+
+<section style="background:#f0f0f3">
+  <span class="tag">S11 · بنر تماس</span>
+  <h2>دنبال مدیر محصولی هستید که فرایندهای پیچیده را ساده کند؟ صحبت کنیم.</h2>
+  <div class="row"><span class="btn p">کپی ایمیل ⧉</span><span class="btn">لینکدین</span><span class="btn">دانلود رزومه</span></div>
+  <p class="muted">معمولاً ظرف ۲۴ ساعت پاسخ می‌دهم · به وقت تهران</p>
+  <div class="note">پایان صفحه = لحظه تصمیم. سه اقدام، بدون فرم (ریکروتر ایمیل می‌فرستد). «زمان پاسخ» تردید را کم می‌کند.</div>
+</section>
+
+<footer>
+  <span class="tag">S12 · فوتر</span>
+  <div class="row muted" style="justify-content:space-between"><span>آخرین به‌روزرسانی: <span class="ph">⟦ماه سال⟧</span></span><span>© ۲۰۲۶ مریم رجبیان</span></div>
+  <div class="note">تاریخ به‌روزرسانی سیگنال «سایت زنده است» (C11) — در بنچمارک سایت‌های خوابیده بدترین اثر را داشتند.</div>
+</footer>
+
+</div>
+<p class="legend">راهنما: کادرهای خاکستری = تصویر/محتوای واقعی بعداً · <span class="ph">⟦…⟧</span> = داده‌ای که از رزومه PDF پر می‌شود · کادر زرد = دلیل طراحی. این وایرفریم عمداً بی‌رنگ است تا روی «ساختار» تصمیم بگیریم، نه ظاهر.</p>
+
+<script>
+  const bm=document.getElementById('bm'),bn=document.getElementById('bn');
+  bm.onclick=()=>{const on=document.body.classList.toggle('mobile');bm.setAttribute('aria-pressed',on)};
+  bn.onclick=()=>{const off=document.body.classList.toggle('nonotes');bn.setAttribute('aria-pressed',!off)};
+</script>
+</body>
+</html>

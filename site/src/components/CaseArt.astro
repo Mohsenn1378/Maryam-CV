@@ -1,0 +1,153 @@
+---
+// Original product illustrations (3 slides per case). No company marks are drawn here;
+// official logos live in public/logos/ and are shown unmodified in the card badge.
+interface Props { kind: 'pricing' | 'playground' | 'agents'; n: 0 | 1 | 2 }
+const { kind, n } = Astro.props;
+const k = `${kind}-${n}`;
+const mono = 'ui-monospace, SFMono-Regular, Menlo, monospace';
+---
+<svg viewBox="0 0 320 200" class="art-svg" preserveAspectRatio="xMidYMid meet" role="presentation">
+  {k === 'pricing-0' && (
+    <g>
+      {[0, 1, 2].map((i) => (
+        <g transform={`translate(${22 + i * 96} 34)`}>
+          <rect width="84" height="112" rx="14" fill="var(--surf)" stroke={i < 2 ? 'var(--g2)' : 'var(--line)'} stroke-width={i < 2 ? 2 : 1} />
+          <rect x="12" y="14" width="26" height="26" rx="8" fill={i < 2 ? 'color-mix(in srgb, var(--g2) 35%, transparent)' : 'var(--bg2)'} />
+          <rect x="48" y="18" width="26" height="14" rx="7" fill={i < 2 ? 'var(--g2)' : 'var(--line)'} />
+          <circle cx={i < 2 ? 67 : 55} cy="25" r="5" fill="#fff" />
+          <rect x="12" y="54" width="52" height="7" rx="3.5" fill="var(--mute)" opacity=".7" />
+          <rect x="12" y="68" width="36" height="7" rx="3.5" fill="var(--mute)" opacity=".4" />
+          <rect x="12" y="90" width="44" height="10" rx="5" fill={i < 2 ? 'var(--a2)' : 'var(--line)'} opacity={i < 2 ? 1 : .6} />
+        </g>
+      ))}
+    </g>
+  )}
+  {k === 'pricing-1' && (
+    <g>
+      <rect x="30" y="30" width="260" height="140" rx="16" fill="var(--surf)" stroke="var(--line)" />
+      <rect x="50" y="52" width="90" height="9" rx="4.5" fill="var(--mute)" opacity=".7" />
+      <line x1="70" y1="112" x2="250" y2="112" stroke="var(--line)" stroke-width="3" />
+      <line x1="70" y1="112" x2="160" y2="112" stroke="var(--a2)" stroke-width="4" />
+      {[70, 160, 250].map((x, i) => (
+        <g>
+          <circle cx={x} cy="112" r="12" fill={i < 2 ? 'var(--a2)' : 'var(--surf)'} stroke={i < 2 ? 'var(--a2)' : 'var(--line)'} stroke-width="3" />
+          {i < 2 && <path d={`M${x - 5} 112l3.5 3.5 6.5-7`} stroke="var(--bg)" stroke-width="2.6" fill="none" stroke-linecap="round" />}
+          <rect x={x - 22} y="134" width="44" height="8" rx="4" fill="var(--mute)" opacity={i < 2 ? .6 : .3} />
+        </g>
+      ))}
+    </g>
+  )}
+  {k === 'pricing-2' && (
+    <g>
+      <rect x="90" y="16" width="140" height="172" rx="20" fill="var(--surf)" stroke="var(--line)" />
+      <rect x="90" y="16" width="140" height="34" rx="20" fill="var(--g2)" />
+      <rect x="90" y="34" width="140" height="16" fill="var(--g2)" />
+      <circle cx="110" cy="33" r="8" fill="#fff" opacity=".9" />
+      <rect x="124" y="29" width="50" height="8" rx="4" fill="#fff" opacity=".85" />
+      <rect x="140" y="64" width="78" height="22" rx="11" fill="var(--g1)" />
+      <rect x="102" y="96" width="92" height="34" rx="12" fill="var(--bg2)" stroke="var(--line)" />
+      <rect x="112" y="106" width="64" height="6" rx="3" fill="var(--mute)" opacity=".7" />
+      <rect x="112" y="117" width="44" height="6" rx="3" fill="var(--mute)" opacity=".4" />
+      <rect x="102" y="140" width="40" height="20" rx="10" fill="none" stroke="var(--a2)" stroke-width="2" />
+      <rect x="148" y="140" width="56" height="20" rx="10" fill="none" stroke="var(--a2)" stroke-width="2" />
+      <rect x="102" y="166" width="116" height="12" rx="6" fill="var(--bg2)" stroke="var(--line)" />
+    </g>
+  )}
+
+  {k === 'playground-0' && (
+    <g>
+      <rect x="16" y="16" width="288" height="168" rx="14" fill="var(--surf)" stroke="var(--line)" />
+      <circle cx="34" cy="32" r="4" fill="var(--line)" /><circle cx="47" cy="32" r="4" fill="var(--line)" /><circle cx="60" cy="32" r="4" fill="var(--line)" />
+      <rect x="236" y="23" width="56" height="18" rx="9" fill="var(--g2)" /><path d="M258 27l9 5-9 5z" fill="#fff" />
+      <line x1="16" y1="48" x2="304" y2="48" stroke="var(--line)" />
+      <text x="32" y="74" fill="var(--a2)" font-family={mono} font-size="12">POST</text>
+      <rect x="72" y="65" width="120" height="10" rx="5" fill="var(--mute)" opacity=".6" />
+      {[92, 110, 128, 146, 164].map((y, i) => (
+        <g><rect x="32" y={y} width="16" height="7" rx="3.5" fill="var(--line)" /><rect x="56" y={y} width={[90, 140, 70, 120, 100][i]} height="7" rx="3.5" fill={i === 1 ? 'var(--a1)' : 'var(--mute)'} opacity={i === 1 ? .9 : .4} /></g>
+      ))}
+    </g>
+  )}
+  {k === 'playground-1' && (
+    <g>
+      <rect x="24" y="30" width="104" height="140" rx="10" fill="var(--surf)" stroke="var(--line)" />
+      <circle cx="48" cy="56" r="11" fill="var(--mute)" opacity=".5" />
+      <rect x="66" y="50" width="48" height="6" rx="3" fill="var(--mute)" opacity=".7" /><rect x="66" y="61" width="32" height="5" rx="2.5" fill="var(--mute)" opacity=".4" />
+      {[86, 98, 110, 128, 140, 152].map((y, i) => <rect x="38" y={y} width={i % 2 ? 54 : 76} height="5" rx="2.5" fill="var(--mute)" opacity=".35" />)}
+      <path d="M140 100h32m0 0l-8-8m8 8l-8 8" stroke="var(--a2)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+      <rect x="184" y="30" width="112" height="140" rx="10" fill="var(--bg2)" stroke="var(--line)" />
+      <text x="196" y="52" fill="var(--mute)" font-family={mono} font-size="13">{'{'}</text>
+      {[0, 1, 2, 3, 4].map((i) => (
+        <g transform={`translate(206 ${62 + i * 18})`}>
+          <rect width={[30, 38, 26, 34, 28][i]} height="7" rx="3.5" fill="var(--a2)" />
+          <rect x={[36, 44, 32, 40, 34][i]} width={[40, 30, 46, 34, 38][i]} height="7" rx="3.5" fill="var(--mute)" opacity=".55" />
+        </g>
+      ))}
+      <text x="196" y="160" fill="var(--mute)" font-family={mono} font-size="13">{'}'}</text>
+    </g>
+  )}
+  {k === 'playground-2' && (
+    <g>
+      <rect x="20" y="22" width="180" height="156" rx="14" fill="var(--surf)" stroke="var(--line)" />
+      {[0, 1, 2, 3].map((r) => [0, 1, 2, 3, 4].map((c) => (
+        <rect x={36 + c * 32} y={40 + r * 34} width="26" height="26" rx="6" fill="var(--g2)" opacity={[.15, .35, .8, .5, .2, .3, .9, .6, .25, .15, .55, .7, .3, .2, .4, .1, .35, .45, .2, .15][r * 5 + c]} />
+      )))}
+      <g transform="translate(214 40)">
+        <rect width="88" height="40" rx="14" fill="var(--bg2)" stroke="var(--line)" />
+        <rect x="12" y="12" width="56" height="6" rx="3" fill="var(--mute)" opacity=".7" /><rect x="12" y="23" width="36" height="6" rx="3" fill="var(--mute)" opacity=".4" />
+      </g>
+      <g transform="translate(214 92)">
+        <rect width="88" height="40" rx="14" fill="var(--bg2)" stroke="var(--a2)" />
+        <rect x="12" y="12" width="48" height="6" rx="3" fill="var(--a2)" opacity=".9" /><rect x="12" y="23" width="60" height="6" rx="3" fill="var(--mute)" opacity=".4" />
+      </g>
+      <g transform="translate(214 144)"><rect width="60" height="26" rx="13" fill="var(--g2)" /><rect x="14" y="10" width="32" height="6" rx="3" fill="#fff" opacity=".9" /></g>
+    </g>
+  )}
+
+  {k === 'agents-0' && (
+    <g>
+      <defs><linearGradient id="agg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--g1)" /><stop offset="1" stop-color="var(--g2)" /></linearGradient></defs>
+      <g stroke="var(--line)" stroke-width="2" stroke-dasharray="5 5"><line x1="160" y1="100" x2="64" y2="50" /><line x1="160" y1="100" x2="256" y2="50" /><line x1="160" y1="100" x2="160" y2="166" /></g>
+      <circle cx="160" cy="100" r="44" fill="color-mix(in srgb, var(--g2) 18%, transparent)" />
+      <circle cx="160" cy="100" r="30" fill="url(#agg)" />
+      <path d="M148 94h24v16h-24z M154 88v6 M166 88v6" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" />
+      <circle cx="153" cy="102" r="2.5" fill="#fff" /><circle cx="167" cy="102" r="2.5" fill="#fff" />
+      <g transform="translate(40 26)"><rect width="48" height="48" rx="14" fill="var(--surf)" stroke="var(--line)" /><path d="M10 34l9-10 8 6 11-14" stroke="var(--a2)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" /></g>
+      <g transform="translate(232 26)"><rect width="48" height="48" rx="14" fill="var(--surf)" stroke="var(--line)" /><path d="M12 16h4l4 16h14l3-11H18" stroke="var(--a2)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" /><circle cx="21" cy="37" r="2.5" fill="var(--a2)" /><circle cx="32" cy="37" r="2.5" fill="var(--a2)" /></g>
+      <g transform="translate(136 144)"><rect width="48" height="48" rx="14" fill="var(--surf)" stroke="var(--line)" /><path d="M15 31h19a6 6 0 0 0 0-12 9 9 0 0 0-17 2 5 5 0 0 0-2 10z" stroke="var(--a2)" stroke-width="3" fill="none" stroke-linejoin="round" /></g>
+    </g>
+  )}
+  {k === 'agents-1' && (
+    <g>
+      {[0, 1, 2].map((i) => (
+        <g transform={`translate(${20 + i * 98} 30)`}>
+          <rect width="86" height="140" rx="14" fill="var(--surf)" stroke={i === 0 ? 'var(--g2)' : 'var(--line)'} stroke-width={i === 0 ? 2 : 1} />
+          <rect x="12" y="14" width="30" height="30" rx="9" fill="color-mix(in srgb, var(--a2) 20%, transparent)" />
+          {i === 0 && <path d="M19 36l6-7 5 4 7-9" stroke="var(--a2)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />}
+          {i === 1 && <path d="M19 22h3l3 12h10l2-8H24" stroke="var(--a2)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />}
+          {i === 2 && <path d="M20 36h13a5 5 0 0 0 0-10 7 7 0 0 0-13 2 4 4 0 0 0 0 8z" stroke="var(--a2)" stroke-width="2.5" fill="none" stroke-linejoin="round" />}
+          <rect x="12" y="58" width="58" height="7" rx="3.5" fill="var(--mute)" opacity=".7" />
+          <rect x="12" y="72" width="44" height="6" rx="3" fill="var(--mute)" opacity=".4" />
+          <rect x="12" y="84" width="52" height="6" rx="3" fill="var(--mute)" opacity=".4" />
+          <rect x="12" y="110" width="62" height="16" rx="8" fill={i === 0 ? 'var(--g2)' : 'var(--bg2)'} stroke={i === 0 ? 'none' : 'var(--line)'} />
+        </g>
+      ))}
+    </g>
+  )}
+  {k === 'agents-2' && (
+    <g>
+      <rect x="40" y="20" width="240" height="160" rx="16" fill="var(--surf)" stroke="var(--line)" />
+      {[0, 1, 2, 3, 4].map((i) => (
+        <g transform={`translate(56 ${36 + i * 28})`}>
+          <rect width="208" height="22" rx="8" fill={i === 2 ? 'color-mix(in srgb, var(--g2) 28%, transparent)' : 'var(--bg2)'} stroke={i === 2 ? 'var(--g2)' : 'none'} />
+          <text x="10" y="15" fill={i === 2 ? 'var(--ink)' : 'var(--mute)'} font-family={mono} font-size="11" font-weight="700">{[8, 9, 10, 11, 12][i]}</text>
+          <rect x="36" y="8" width={[90, 70, 100, 80, 60][i]} height="6" rx="3" fill={i === 2 ? 'var(--ink)' : 'var(--mute)'} opacity={i === 2 ? .9 : .4} />
+          {i === 2 && <path d="M188 6l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z" fill="var(--a2)" />}
+        </g>
+      ))}
+    </g>
+  )}
+</svg>
+
+<style>
+  .art-svg { width: 100%; height: 100%; display: block; }
+</style>

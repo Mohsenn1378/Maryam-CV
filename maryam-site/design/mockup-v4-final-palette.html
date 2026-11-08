@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup v4 — Deep sea + indigo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+body[data-p="1"]{--bg:#060B17;--bg2:#0B1324;--surf:#111A2E;--line:#1F2A44;--ink:#F1F5F9;--mute:#94A3B8;--a1:#34D399;--a2:#22D3EE;--glow:#8B5CF6;--onA:#04201A;--g1:#34D399;--g2:#22D3EE}
+body[data-p="2"]{--bg:#0C0D14;--bg2:#11121C;--surf:#171930;--line:#272A45;--ink:#F4F4F6;--mute:#A9ACBC;--a1:#6C63FF;--a2:#22D3B8;--glow:#3D5FD0;--onA:#FFFFFF;--g1:#6C63FF;--g2:#22D3B8}
+body[data-p="3"]{--bg:#0E1923;--bg2:#12212E;--surf:#182A39;--line:#264052;--ink:#F2F6F8;--mute:#9CB1BF;--a1:#52B3D9;--a2:#68C3A3;--glow:#FFC66B;--onA:#06202B;--g1:#52B3D9;--g2:#68C3A3}
+body[data-p="4"]{--bg:#0E1923;--bg2:#12212E;--surf:#182A39;--line:#264052;--ink:#F2F6F8;--mute:#A3B5C2;--a1:#8B7CFF;--a2:#22D3B8;--glow:#6C63FF;--onA:#FFFFFF;--g1:#5B54E8;--g2:#6C63FF}
+body[data-p="5"]{--bg:#0E1923;--bg2:#12212E;--surf:#182A39;--line:#264052;--ink:#F2F6F8;--mute:#A3B5C2;--a1:#A78BFA;--a2:#7FC8E8;--glow:#7C6CFF;--onA:#FFFFFF;--g1:#5B54E8;--g2:#4F8FE8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,sans-serif;font-size:17px;line-height:1.65;transition:background .4s}
+a{color:inherit;text-decoration:none}
+.review{position:sticky;top:0;z-index:60;background:#fff;color:#111;font-size:13.5px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding:8px 14px;font-family:system-ui}
+.review b{margin-inline-end:auto}
+.review button{font:inherit;border:1px solid #ccc;border-radius:6px;padding:4px 10px;background:#fff;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.review button[aria-pressed="true"]{background:#111;color:#fff;border-color:#111}
+.sw{display:inline-flex}.sw i{width:12px;height:12px;border-radius:50%;margin-inline-start:-3px;border:1px solid #0003}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:40px}
+.top{display:flex;align-items:center;gap:28px;padding-block:20px}
+.brand{font-weight:800;font-size:18px;display:flex;align-items:center;gap:10px}
+.brand i{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--g1),var(--g2));display:grid;place-items:center;color:var(--onA);font-style:normal;font-size:14px}
+.nav{display:flex;gap:26px;margin-inline-start:auto;font-size:15px;color:var(--mute)}
+.nav a:hover{color:var(--ink)}
+.lang{font-size:14px;color:var(--mute);border:1px solid var(--line);border-radius:8px;padding:3px 10px}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:15px;border-radius:12px;padding:11px 20px;border:1px solid var(--line);background:var(--surf);color:var(--ink);cursor:pointer;transition:transform .15s,border-color .2s}
+.btn:hover{border-color:var(--a2);transform:translateY(-1px)}
+.btn.p{background:linear-gradient(135deg,var(--g1),var(--g2));color:var(--onA);border:0}
+.btn svg{width:17px;height:17px}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--a2);outline-offset:3px}
+
+/* hero */
+.hero{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;padding-block:56px 96px}
+.hero::before{content:"";position:absolute;inset:-40px -10% auto auto;width:620px;height:620px;background:radial-gradient(circle,color-mix(in srgb,var(--glow) 28%,transparent),transparent 65%);pointer-events:none;z-index:0}
+.hero>*{position:relative;z-index:1}
+.avail{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--a1);background:color-mix(in srgb,var(--a1) 12%,transparent);border:1px solid color-mix(in srgb,var(--a1) 30%,transparent);border-radius:999px;padding:4px 12px}
+.avail i{width:8px;height:8px;border-radius:50%;background:var(--a1);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+h1{font-size:54px;line-height:1.1;font-weight:800;letter-spacing:-.025em;margin:18px 0 18px}
+.lede{color:var(--mute);font-size:18px;max-width:31em;margin:0 0 30px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.proof{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap;color:var(--mute);font-size:14px}
+.proof strong{display:block;color:var(--ink);font-size:24px;font-weight:800;line-height:1.2}
+.s{text-decoration:underline dotted 1.5px;text-underline-offset:5px;text-decoration-color:var(--mute)}
+
+/* chat */
+.chatwin{background:color-mix(in srgb,var(--surf) 88%,transparent);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 40px 80px -40px #000}
+.cw-top{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--g1),var(--g2));display:grid;place-items:center;font-weight:800;color:var(--onA);position:relative}
+.av::after{content:"";position:absolute;inset-block-end:0;inset-inline-end:0;width:11px;height:11px;border-radius:50%;background:var(--a1);border:2px solid var(--surf)}
+.cw-top small{display:block;color:var(--mute);font-size:12.5px;line-height:1.3}
+.chat{padding:20px 18px 18px;display:flex;flex-direction:column;gap:10px;min-height:380px}
+.msg{max-width:84%;padding:10px 14px;border-radius:18px;font-size:15px;line-height:1.55;opacity:0;transform:translateY(8px) scale(.98);animation:in .35s forwards}
+.me{align-self:flex-end;background:linear-gradient(135deg,var(--g1),var(--g2));color:var(--onA);border-end-end-radius:6px;font-weight:500}
+.her{align-self:flex-start;background:var(--bg2);border:1px solid var(--line);border-end-start-radius:6px}
+.her b{color:var(--a2)}
+.typing{align-self:flex-start;display:flex;gap:4px;padding:12px 14px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;opacity:0;animation:in .2s forwards, out .2s forwards}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--mute);animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{50%{transform:translateY(-3px);opacity:.4}}
+.m1{animation-delay:.3s}
+.t1{animation-delay:.8s,1.5s}.m2{animation-delay:1.55s}
+.m3{animation-delay:2.4s}
+.t2{animation-delay:2.9s,3.6s}.m4{animation-delay:3.65s}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;opacity:0;animation:in .35s 4.3s forwards}
+.chip{font-size:14px;font-weight:700;border:1px solid var(--a2);color:var(--a2);border-radius:999px;padding:6px 14px;display:inline-flex;gap:6px;align-items:center;transition:background .2s}
+.chip:hover{background:color-mix(in srgb,var(--a2) 14%,transparent)}
+.chip svg{width:15px;height:15px}
+@keyframes in{to{opacity:1;transform:none}}
+@keyframes out{to{opacity:0;height:0;padding:0;margin:-5px 0;border-width:0}}
+
+/* work */
+.work{padding-block:40px 100px;border-top:1px solid var(--line)}
+.work h2{font-size:34px;font-weight:800;letter-spacing:-.02em;margin:40px 0 6px}
+.work .sub{color:var(--mute);margin:0 0 34px}
+.cases{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:20px}
+.case{background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s}
+.case:hover{border-color:var(--a2);transform:translateY(-2px)}
+.case.lead{grid-row:1/3;background:linear-gradient(160deg,color-mix(in srgb,var(--a1) 16%,var(--surf)),var(--surf) 55%)}
+.case .art{height:150px;border-radius:14px;background:var(--bg2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.case.lead .art{height:260px}
+.meta{font-size:13.5px;color:var(--mute)}
+.case h3{margin:0;font-size:21px;line-height:1.35;font-weight:800;letter-spacing:-.01em}
+.case.lead h3{font-size:27px}
+.case p{margin:0;color:var(--mute);font-size:15px}
+.case p strong{color:var(--a2)}
+.more{margin-top:auto;padding-top:8px;font-weight:700;font-size:15px;color:var(--a2);display:inline-flex;gap:6px;align-items:center}
+.more svg{width:16px;height:16px;transition:transform .2s}
+.case:hover .more svg{transform:translateX(3px)}
+.others{margin-top:30px;display:grid;grid-template-columns:repeat(2,1fr);column-gap:40px;border-top:1px solid var(--line)}
+.others a{display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.others b{font-weight:700;font-size:15.5px}
+.others span{color:var(--mute);font-size:14px}
+.legend{color:var(--mute);font-size:13px;padding-block:22px}
+
+@media (max-width:900px){
+  .wrap{padding-inline:16px}.nav,.lang{display:none}
+  .hero{grid-template-columns:1fr;gap:32px;padding-block:24px 56px}
+  h1{font-size:36px}
+  .top .btn{padding:8px 12px;font-size:14px;white-space:nowrap}.brand{white-space:nowrap;font-size:16px}
+  .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;font-size:12.5px;line-height:1.4}.proof strong{font-size:19px}.cases,.others{grid-template-columns:1fr}.case.lead{grid-row:auto}.case.lead .art{height:170px}
+  .hero::before{width:380px;height:380px}
+}
+@media (prefers-reduced-motion:reduce){.msg,.chips{animation:none;opacity:1;transform:none}.typing{display:none}.avail i{animation:none}}
+</style>
+</head>
+<body data-p="4">
+<div class="review" role="toolbar" aria-label="Review">
+  <b>Mockup v4 · Deep sea background + indigo</b>
+  <button data-p="3" aria-pressed="false"><span class="sw"><i style="background:#0E1923"></i><i style="background:#52B3D9"></i><i style="background:#68C3A3"></i></span>طرح ۳ قبلی</button>
+  <button data-p="4" aria-pressed="true"><span class="sw"><i style="background:#0E1923"></i><i style="background:#6C63FF"></i><i style="background:#22D3B8"></i></span>۳ + بنفش نیلی و سبزآبی (طرح ۲)</button>
+  <button data-p="5" aria-pressed="false"><span class="sw"><i style="background:#0E1923"></i><i style="background:#6C63FF"></i><i style="background:#7FC8E8"></i></span>۳ + بنفش و آبی (بدون سبز)</button>
+  <button id="replay">Replay chat</button>
+</div>
+
+<header class="wrap top">
+  <a class="brand" href="#"><i>MR</i>Maryam Rajabian</a>
+  <nav class="nav" aria-label="Main"><a href="#work">Work</a><a href="#">Experience</a><a href="#">How I work</a><a href="#">Contact</a></nav>
+  <a class="lang" href="#" hreflang="fa" lang="fa">فارسی</a>
+  <a class="btn p" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Download CV</a>
+</header>
+
+<section class="wrap hero" aria-labelledby="h">
+  <div>
+    <span class="avail"><i></i>Open to Product Manager roles, in Mashhad or remote</span>
+    <h1 id="h">I build messaging products businesses rely on.</h1>
+    <p class="lede">Product Manager with 5 years across messaging SaaS and AI APIs. I shipped Mochat, WhatsApp Pro and a modular pricing model at Inboxino, and launched an API Playground at MagicalAPI.</p>
+    <div class="ctas"><a class="btn p" href="#">Download CV</a><a class="btn" href="#work">See my work</a></div>
+    <div class="proof">
+      <span><strong class="s" title="Sample value — waiting for Maryam (M1)">+25%</strong>conversion after pricing redesign</span>
+      <span><strong>5</strong>features shipped at Inboxino</span>
+      <span><strong>10th / 74</strong>Starcoach AI hackathon</span>
+    </div>
+  </div>
+  <div class="chatwin" aria-label="Sample conversation">
+    <div class="cw-top"><span class="av">M</span><div><strong>Maryam</strong><small>Usually replies within a day</small></div></div>
+    <div class="chat" id="chat">
+      <div class="msg me m1">What have you built recently?</div>
+      <div class="typing t1"><i></i><i></i><i></i></div>
+      <div class="msg her m2">Mochat, an AI chatbot for businesses, plus WhatsApp Pro and Number Finder at Inboxino.</div>
+      <div class="msg me m3">Did it move any numbers?</div>
+      <div class="typing t2"><i></i><i></i><i></i></div>
+      <div class="msg her m4">I rebuilt pricing into modular packages. Conversion went up <b class="s" title="Sample value (M1)">25%</b>.</div>
+      <div class="chips">
+        <a class="chip" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>Send me your CV</a>
+        <a class="chip" href="#work">Show your work</a>
+        <a class="chip" href="#">Email Maryam</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap work" id="work" aria-labelledby="hw">
+  <h2 id="hw">Selected work</h2>
+  <p class="sub">Three projects where I owned the product decisions.</p>
+  <div class="cases">
+    <a class="case lead" href="#">
+      <div class="art" aria-hidden="true"><svg width="240" height="170" viewBox="0 0 240 170"><rect x="20" y="20" width="200" height="36" rx="10" fill="var(--surf)" stroke="var(--line)"/><rect x="20" y="66" width="96" height="84" rx="12" fill="var(--surf)" stroke="var(--a1)" stroke-width="2"/><rect x="124" y="66" width="96" height="84" rx="12" fill="var(--surf)" stroke="var(--line)"/><rect x="34" y="122" width="68" height="16" rx="8" fill="var(--a1)"/><rect x="138" y="122" width="68" height="16" rx="8" fill="var(--line)"/><rect x="34" y="80" width="40" height="8" rx="4" fill="var(--mute)"/><rect x="138" y="80" width="40" height="8" rx="4" fill="var(--mute)"/></svg></div>
+      <span class="meta">Inboxino, Product Manager, 2024–2025</span>
+      <h3>Modular pricing and behaviour-based bundles for a messaging SaaS</h3>
+      <p>Replaced fixed plans with pick-what-you-need services and phased payments. Conversion rose <strong class="s" title="Sample (M1)">25%</strong>.</p>
+      <span class="more">Read case study<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h13m0 0l-5-5m5 5l-5 5"/></svg></span>
+    </a>
+    <a class="case" href="#">
+      <span class="meta">MagicalAPI, Product Owner, remote</span>
+      <h3>An API Playground so developers can try before they buy</h3>
+      <p>New product for AI resume-parsing APIs. Activation <strong class="s" title="Sample (M4)">doubled</strong>.</p>
+      <span class="more">Read case study<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h13m0 0l-5-5m5 5l-5 5"/></svg></span>
+    </a>
+    <a class="case" href="#">
+      <span class="meta">Starcoach hackathon, team PM, 2026</span>
+      <h3>Product lead for three agentic-AI challenges: Wallex, Torob, Liara</h3>
+      <p>Framed problems and priorities for three builds in parallel. Team placed <strong>10th of 74</strong>.</p>
+      <span class="more">Read case study<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h13m0 0l-5-5m5 5l-5 5"/></svg></span>
+    </a>
+  </div>
+  <div class="others">
+    <a href="#"><b>Mochat, AI chatbot</b><span>Inboxino</span></a>
+    <a href="#"><b>Full panel UX/UI redesign</b><span>Led the design team</span></a>
+    <a href="#"><b>WhatsApp Pro and Number Finder</b><span>Inboxino</span></a>
+    <a href="#"><b>Process documentation, Mashhad Municipality</b><span>Freelance</span></a>
+  </div>
+  <p class="legend">Dotted-underlined numbers are samples and will be replaced with Maryam's real figures.</p>
+</section>
+
+<script>
+document.querySelectorAll('[data-p]').forEach(b=>{if(b.tagName!=='BUTTON')return;b.onclick=()=>{document.body.dataset.p=b.dataset.p;document.querySelectorAll('button[data-p]').forEach(x=>x.setAttribute('aria-pressed',x===b))}});
+document.getElementById('replay').onclick=()=>{const c=document.getElementById('chat');const n=c.cloneNode(true);c.replaceWith(n)};
+</script>
+</body>
+</html>

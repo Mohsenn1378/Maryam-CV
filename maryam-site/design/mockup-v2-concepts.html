@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ماکاپ v2 — چهار ایده محصولی</title>
+<link href="https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.css" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Vazirmatn,system-ui,sans-serif;letter-spacing:0;line-height:1.85;font-size:17px}
+a{color:inherit;text-decoration:none}
+.review{position:sticky;top:0;z-index:60;background:#1b1d21;color:#fff;font-size:14px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding:8px 14px}
+.review b{margin-inline-end:auto;font-weight:600}
+.review button{font:inherit;border:0;border-radius:6px;padding:5px 11px;background:#383c44;color:#fff;cursor:pointer}
+.review button[aria-pressed="true"]{background:#fff;color:#1b1d21}
+.concept{display:none;min-height:calc(100vh - 44px)}
+.concept.on{display:block}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:40px}
+.top{display:flex;align-items:center;gap:24px;padding-block:20px}
+.brand{font-weight:800;font-size:19px}
+.nav{display:flex;gap:24px;margin-inline-start:auto;font-size:15px;opacity:.75}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:15px;border-radius:999px;padding:10px 20px;border:1.5px solid currentColor;cursor:pointer;background:none}
+.btn svg{width:17px;height:17px}
+.btn:focus-visible,a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+[dir="rtl"] .mirror{transform:scaleX(-1)}
+h1{font-weight:800;line-height:1.4;margin:0}
+.s{text-decoration:underline dotted 1.5px;text-underline-offset:5px}
+.note{font-size:13px;opacity:.7;padding-block:18px}
+
+/* ============ C1 گفتگو — violet & mint ============ */
+.c1{--bg:#F5F1FF;--ink:#221636;--mute:#5E5277;--acc:#6B4EF0;--mint:#BDF2DA;--mint-ink:#0D5C3D;--bub:#FFFFFF;background:var(--bg);color:var(--ink)}
+.c1 .btn.p{background:var(--acc);border-color:var(--acc);color:#fff}
+.c1 .hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-block:48px 80px}
+.c1 h1{font-size:46px}
+.c1 .lede{color:var(--mute);margin:18px 0 28px;max-width:30em}
+.phone{background:#fff;border-radius:28px;box-shadow:0 30px 60px -30px rgba(60,30,140,.45);overflow:hidden;max-width:440px;justify-self:end;width:100%}
+.ph-top{display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--acc);color:#fff}
+.ph-top i{width:38px;height:38px;border-radius:50%;background:var(--mint);display:grid;place-items:center;color:var(--mint-ink);font-style:normal;font-weight:800}
+.ph-top small{display:block;opacity:.8;font-size:12.5px;line-height:1.4}
+.chat{padding:18px;display:flex;flex-direction:column;gap:10px;background:#F9F7FF;min-height:360px}
+.msg{max-width:82%;padding:10px 14px;border-radius:18px;font-size:15px;line-height:1.75;opacity:0;transform:translateY(8px);animation:in .4s forwards}
+.msg.me{align-self:flex-end;background:#ECE7FF;border-end-end-radius:6px}
+.msg.her{align-self:flex-start;background:#fff;border:1px solid #E6E0FA;border-end-start-radius:6px}
+.msg b{color:var(--mint-ink);background:var(--mint);border-radius:5px;padding:0 5px}
+.m1{animation-delay:.3s}.m2{animation-delay:1s}.m3{animation-delay:1.8s}.m4{animation-delay:2.6s}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;opacity:0;animation:in .4s 3.2s forwards}
+.chip{font-size:14px;font-weight:700;border:1.5px solid var(--acc);color:var(--acc);border-radius:999px;padding:5px 14px;background:#fff}
+@keyframes in{to{opacity:1;transform:none}}
+
+/* ============ C2 نسخه‌ها — midnight & peach ============ */
+.c2{--bg:#101B3D;--ink:#F4F1EA;--mute:#AEB6CF;--peach:#FFB38A;--sky:#8EC5FF;--line:#2A3763;background:var(--bg);color:var(--ink)}
+.c2 .btn.p{background:var(--peach);border-color:var(--peach);color:#101B3D}
+.c2 .hero{padding-block:56px 40px}
+.c2 .badge{display:inline-flex;gap:10px;align-items:center;background:#1B2A57;border:1px solid var(--line);border-radius:999px;padding:4px 14px 4px 6px;font-size:14px;color:var(--sky)}
+.c2 .badge span{background:var(--peach);color:#101B3D;border-radius:999px;padding:0 10px;font-weight:800}
+.c2 h1{font-size:64px;margin-top:22px;max-width:13em}
+.c2 h1 em{font-style:normal;color:var(--peach)}
+.c2 .lede{color:var(--mute);max-width:36em;margin:18px 0 30px}
+.log{border-top:1px solid var(--line);margin-top:20px}
+.rel{display:grid;grid-template-columns:120px 1fr auto;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:start}
+.ver{font-weight:800;font-size:22px;color:var(--peach)}
+.ver small{display:block;font-size:13px;color:var(--mute);font-weight:400}
+.rel h3{margin:0;font-size:19px}
+.rel p{margin:4px 0 0;color:var(--mute);font-size:15px}
+.tag{font-size:12.5px;border-radius:6px;padding:1px 8px;margin-inline-end:6px;font-weight:700}
+.t-new{background:#123F35;color:#7FE6C0}.t-imp{background:#3A2A1E;color:var(--peach)}
+.rel .when{color:var(--mute);font-size:14px;white-space:nowrap}
+.rel.cur{background:linear-gradient(90deg,transparent,#16244d 30%,#16244d 70%,transparent)}
+
+/* ============ C3 داشبورد — cobalt & lime ============ */
+.c3{--bg:#EEF2FF;--ink:#0E1A3A;--mute:#4D5A7C;--acc:#2457FF;--lime:#C6F432;--card:#FFFFFF;--line:#D5DDF5;background:var(--bg);color:var(--ink)}
+.c3 .btn.p{background:var(--ink);border-color:var(--ink);color:#fff}
+.c3 .hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;padding-block:44px 80px}
+.c3 h1{font-size:44px}
+.c3 .lede{color:var(--mute);margin:16px 0 26px}
+.dash{background:var(--card);border-radius:20px;border:1px solid var(--line);padding:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.dash .hd{grid-column:1/-1;display:flex;justify-content:space-between;font-size:14px;color:var(--mute)}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.kpi .v{font-size:28px;font-weight:800;line-height:1.3}
+.kpi .v mark{background:var(--lime);color:var(--ink);border-radius:6px;padding:0 6px}
+.kpi .l{font-size:13px;color:var(--mute);line-height:1.6}
+.funnel{grid-column:1/-1;border:1px solid var(--line);border-radius:14px;padding:14px}
+.funnel .row{display:grid;grid-template-columns:90px 1fr 120px;gap:10px;align-items:center;font-size:13.5px;margin:6px 0}
+.bar{height:14px;border-radius:7px;background:#DCE4FF;position:relative;overflow:hidden}
+.bar i{position:absolute;inset-block:0;inset-inline-start:0;background:var(--acc);border-radius:7px}
+.bar.hit i{background:var(--ink)}
+.funnel .who{color:var(--acc);font-weight:700;font-size:12.5px}
+
+/* ============ C4 لانچ‌شده — rose & forest ============ */
+.c4{--bg:#FFF0EE;--ink:#0F3B30;--mute:#4F6A62;--rose:#FF6F86;--sand:#F7E3D3;--card:#FFFFFF;background:var(--bg);color:var(--ink)}
+.c4 .btn.p{background:var(--ink);border-color:var(--ink);color:#FFF0EE}
+.c4 .hero{padding-block:48px 24px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+.c4 h1{font-size:56px}
+.c4 .lede{color:var(--mute);margin:0 0 6px}
+.board{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px;padding-block:24px 80px}
+.col{background:var(--sand);border-radius:20px;padding:16px}
+.col h2{font-size:16px;margin:0 0 12px;display:flex;justify-content:space-between}
+.col h2 span{font-weight:400;opacity:.7}
+.card{background:var(--card);border-radius:14px;padding:12px 14px;margin-bottom:10px;box-shadow:0 1px 0 rgba(15,59,48,.08)}
+.card h3{margin:0;font-size:16px;line-height:1.6}
+.card p{margin:2px 0 0;font-size:13.5px;color:var(--mute)}
+.card .res{display:inline-block;margin-top:6px;font-size:13px;font-weight:800;color:#fff;background:var(--rose);border-radius:6px;padding:0 8px}
+.col.next{background:var(--ink);color:#FFF0EE}
+.col.next .card{background:transparent;border:2px dashed #6E9A8E;color:#FFF0EE;box-shadow:none}
+.col.next .card p{color:#BFD6CF}
+.col.next .btn{margin-top:8px;color:#FFF0EE}
+
+@media (max-width:880px){
+  .wrap{padding-inline:16px}.nav{display:none}
+  .c1 .hero,.c3 .hero,.c4 .hero{grid-template-columns:1fr;gap:28px;padding-block:24px 48px}
+  .c1 h1,.c3 h1{font-size:30px}.c2 h1{font-size:38px}.c4 h1{font-size:34px}
+  .phone{justify-self:stretch}
+  .rel{grid-template-columns:72px 1fr}.rel .when{grid-column:2}
+  .dash{grid-template-columns:1fr 1fr}.funnel .row{grid-template-columns:70px 1fr}.funnel .who{grid-column:2}
+  .board{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.msg,.chips{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="review" role="toolbar" aria-label="انتخاب ایده">
+  <b>ماکاپ v2 — چهار ایده محصولی، چهار پالت</b>
+  <button data-c="c1" aria-pressed="true">۱ · گفتگو</button>
+  <button data-c="c2" aria-pressed="false">۲ · نسخه‌ها</button>
+  <button data-c="c3" aria-pressed="false">۳ · داشبورد اثر</button>
+  <button data-c="c4" aria-pressed="false">۴ · لانچ‌شده‌ها</button>
+</div>
+
+<!-- ========== C1 ========== -->
+<section class="concept c1 on" id="c1" aria-label="ایده گفتگو">
+  <header class="wrap top"><span class="brand">مریم رجبیان</span><nav class="nav"><a href="#">نمونه‌کارها</a><a href="#">سوابق</a><a href="#">تماس</a><a href="#" lang="en">English</a></nav><a class="btn p" href="#">دانلود رزومه</a></header>
+  <div class="wrap hero">
+    <div>
+      <h1>سلام، مریم هستم. مدیر محصولی که چت‌بات و ابزار پیام‌رسانی برای کسب‌وکارها می‌سازد.</h1>
+      <p class="lede">پنج سال تجربه؛ از Mochat و WhatsApp Pro در Inboxino تا APIهای هوش مصنوعی در MagicalAPI. سؤالی دارید؟ همین‌جا بپرسید.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn p" href="#">دانلود رزومه</a><a class="btn" href="#">دیدن نمونه‌کارها</a></div>
+    </div>
+    <div class="phone" aria-label="نمونه گفتگو">
+      <div class="ph-top"><i>م</i><div>مریم رجبیان<small>معمولاً ظرف یک روز جواب می‌دهد</small></div></div>
+      <div class="chat">
+        <div class="msg me m1">چه چیزهایی ساخته‌ای؟</div>
+        <div class="msg her m2">Mochat، یک چت‌بات هوش مصنوعی، و WhatsApp Pro و Number Finder برای Inboxino.</div>
+        <div class="msg me m3">نتیجه‌اش چه بود؟</div>
+        <div class="msg her m4">قیمت‌گذاری را ماژولار کردم و نرخ تبدیل <b class="s" title="عدد نمونه M1">۲۵٪</b> بالا رفت.</div>
+        <div class="chips"><a class="chip" href="#">رزومه را بفرست</a><a class="chip" href="#">نمونه‌کارها</a><a class="chip" href="#">ایمیل بزنم</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== C2 ========== -->
+<section class="concept c2" id="c2" aria-label="ایده نسخه‌ها">
+  <header class="wrap top"><span class="brand">مریم رجبیان</span><nav class="nav"><a href="#">نمونه‌کارها</a><a href="#">سوابق</a><a href="#">تماس</a><a href="#" lang="en">English</a></nav><a class="btn p" href="#">دانلود رزومه</a></header>
+  <div class="wrap hero">
+    <span class="badge"><span>نسخه ۵</span>منتشر شد و آماده همکاری است</span>
+    <h1>هر نقش، یک نسخه بهتر از <em>مریم رجبیان</em>.</h1>
+    <p class="lede">مدیر محصول. هر نسخه یک شغل است و «تغییرات این نسخه» یعنی چیزهایی که واقعاً لانچ شد.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn p" href="#">دانلود رزومه</a><a class="btn" href="#">همه نسخه‌ها</a></div>
+    <div class="log">
+      <div class="rel cur"><div class="ver">۵.۰<small>مدیر محصول</small></div><div><h3>Inboxino</h3><p><span class="tag t-new">جدید</span>Mochat، WhatsApp Pro، Number Finder، پلتفرم SMS</p><p><span class="tag t-imp">بهبود</span>قیمت‌گذاری ماژولار؛ نرخ تبدیل <span class="s" title="نمونه M1">۲۵٪</span> بیشتر</p></div><span class="when">۱۴۰۳ تا ۱۴۰۴</span></div>
+      <div class="rel"><div class="ver">۴.۰<small>Product Owner</small></div><div><h3>MagicalAPI، دورکار</h3><p><span class="tag t-new">جدید</span>Playground برای امتحان APIهای هوش مصنوعی</p></div><span class="when">۱۴۰۲</span></div>
+      <div class="rel"><div class="ver">۳.۰<small>APM</small></div><div><h3>انگیزه نگار خاوران</h3><p><span class="tag t-imp">بهبود</span>مستندات محصول و فرایند اسکرام تیم</p></div><span class="when">۱۴۰۱ تا ۱۴۰۲</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== C3 ========== -->
+<section class="concept c3" id="c3" aria-label="ایده داشبورد">
+  <header class="wrap top"><span class="brand">مریم رجبیان</span><nav class="nav"><a href="#">نمونه‌کارها</a><a href="#">سوابق</a><a href="#">تماس</a><a href="#" lang="en">English</a></nav><a class="btn p" href="#">دانلود رزومه</a></header>
+  <div class="wrap hero">
+    <div>
+      <h1>محصولی می‌سازم که عددهایش تکان بخورد.</h1>
+      <p class="lede">مدیر محصول با تمرکز بر رشد: قیمت‌گذاری، فعال‌سازی و تحقیق کاربر در پلتفرم‌های SaaS و هوش مصنوعی.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn p" href="#">دانلود رزومه</a><a class="btn" href="#">دیدن نمونه‌کارها</a></div>
+    </div>
+    <div class="dash" aria-label="داشبورد اثر">
+      <div class="hd"><span>اثر من، به زبان متریک</span><span>۱۴۰۱ تا ۱۴۰۴</span></div>
+      <div class="kpi"><div class="v"><mark class="s" title="نمونه M1">۲۵٪</mark></div><div class="l">افزایش نرخ تبدیل، Inboxino</div></div>
+      <div class="kpi"><div class="v"><mark class="s" title="نمونه M4">۲ برابر</mark></div><div class="l">فعال‌سازی، MagicalAPI</div></div>
+      <div class="kpi"><div class="v">۱۰/۷۴</div><div class="l">رتبه هکاتون AI</div></div>
+      <div class="funnel">
+        <div class="row"><span>جذب</span><span class="bar"><i style="width:100%"></i></span><span class="who">SEO در MagicalAPI</span></div>
+        <div class="row"><span>فعال‌سازی</span><span class="bar hit"><i style="width:72%"></i></span><span class="who">Playground</span></div>
+        <div class="row"><span>نگهداشت</span><span class="bar"><i style="width:55%"></i></span><span class="who">بازطراحی پنل</span></div>
+        <div class="row"><span>درآمد</span><span class="bar hit"><i style="width:40%"></i></span><span class="who">قیمت‌گذاری ماژولار</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== C4 ========== -->
+<section class="concept c4" id="c4" aria-label="ایده لانچ‌شده‌ها">
+  <header class="wrap top"><span class="brand">مریم رجبیان</span><nav class="nav"><a href="#">نمونه‌کارها</a><a href="#">سوابق</a><a href="#">تماس</a><a href="#" lang="en">English</a></nav><a class="btn p" href="#">دانلود رزومه</a></header>
+  <div class="wrap hero">
+    <h1>ایده را تا لانچ می‌برم.</h1>
+    <div><p class="lede">مدیر محصول در Inboxino و MagicalAPI. این بُرد کارهای من است؛ ستون آخر برای پروژه بعدی خالی مانده.</p><a class="btn p" href="#">دانلود رزومه</a></div>
+  </div>
+  <div class="wrap board">
+    <div class="col"><h2>لانچ‌شده <span>۵</span></h2>
+      <div class="card"><h3>قیمت‌گذاری ماژولار و پرداخت مرحله‌ای</h3><p>Inboxino</p><span class="res s" title="نمونه M1">۲۵٪ تبدیل بیشتر</span></div>
+      <div class="card"><h3>Mochat، چت‌بات هوش مصنوعی</h3><p>Inboxino</p></div>
+      <div class="card"><h3>Playground برای APIهای هوش مصنوعی</h3><p>MagicalAPI</p><span class="res s" title="نمونه M4">فعال‌سازی ۲ برابر</span></div>
+    </div>
+    <div class="col"><h2>تازه تمام‌شده <span>۱</span></h2>
+      <div class="card"><h3>سه چالش ایجنت هوش مصنوعی</h3><p>هکاتون استارکوچ، برای والکس، ترب و لیارا</p><span class="res">رتبه ۱۰ از ۷۴</span></div>
+    </div>
+    <div class="col next"><h2>بعدی <span>۱</span></h2>
+      <div class="card"><h3>محصول تیم شما</h3><p>دنبال نقش مدیر محصول در مشهد یا دورکار هستم.</p><a class="btn" href="#">صحبت کنیم</a></div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.concept').forEach(c=>c.classList.toggle('on',c.id===b.dataset.c));
+  document.querySelectorAll('[data-c]').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  const c=document.getElementById(b.dataset.c);c.querySelectorAll('.msg,.chips').forEach(e=>{e.style.animation='none';e.offsetHeight;e.style.animation=''});
+});
+</script>
+</body>
+</html>

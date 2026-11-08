@@ -1,0 +1,71 @@
+/* Design tokens — see design/06-design-tokens.md */
+:root {
+  --bg: #0E1923;
+  --bg2: #12212E;
+  --surf: #182A39;
+  --line: #264052;
+  --ink: #F2F6F8;
+  --mute: #A3B5C2;
+  --a1: #8B7CFF;
+  --a2: #22D3B8;
+  --g1: #5B54E8;
+  --g2: #6C63FF;
+  --glow: #6C63FF;
+  --grad: linear-gradient(135deg, var(--g1), var(--g2));
+  --font: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
+  --fs: 17px;
+  --lh: 1.65;
+  color-scheme: dark;
+}
+:root:lang(fa) {
+  --font: 'Vazirmatn Variable', Tahoma, sans-serif;
+  --fs: 18px;
+  --lh: 1.9;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: clip; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--fs);
+  line-height: var(--lh);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+:lang(fa) { letter-spacing: 0 !important; font-style: normal; }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; }
+h1, h2, h3 { margin: 0; }
+
+.wrap { max-width: 1180px; margin-inline: auto; padding-inline: 40px; }
+@media (max-width: 900px) { .wrap { padding-inline: 16px; } }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
+  font: inherit; font-weight: 700; font-size: 15px; line-height: 1.4;
+  border-radius: 12px; padding: 11px 20px;
+  border: 1px solid var(--line); background: var(--surf); color: var(--ink);
+  cursor: pointer; transition: transform .15s, border-color .2s;
+}
+.btn:hover { border-color: var(--a2); transform: translateY(-1px); }
+.btn.primary { background: var(--grad); color: #fff; border: 0; }
+.btn svg { width: 17px; height: 17px; flex: none; }
+
+:focus-visible { outline: 2px solid var(--a2); outline-offset: 3px; border-radius: 6px; }
+.skip { position: absolute; inset-inline-start: 16px; top: -60px; background: var(--ink); color: var(--bg); padding: 8px 14px; border-radius: 8px; z-index: 100; }
+.skip:focus { top: 12px; }
+
+[dir='rtl'] .mirror { transform: scaleX(-1); }
+.ltr { direction: ltr; unicode-bidi: isolate; }
+
+/* sample (unverified) numbers — visible only in dev via .dev class on body wrapper */
+.dev .sample { text-decoration: underline dotted 1.5px; text-underline-offset: 5px; text-decoration-color: #FFC66B; }
+.devbar { background: #3A2E10; color: #FFD98A; font-size: 13px; text-align: center; padding: 6px 12px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
