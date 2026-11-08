@@ -14,15 +14,21 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+# The Astro project lives in the "site" folder of this repository.
+defaults:
+  run:
+    working-directory: site
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: site/package-lock.json
       - id: pages
         uses: actions/configure-pages@v5
       - run: npm ci
@@ -30,9 +36,9 @@ jobs:
         env:
           SITE_URL: ${{ steps.pages.outputs.origin }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
-          path: dist
+          path: site/dist
 
   deploy:
     needs: build
