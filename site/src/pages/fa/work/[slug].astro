@@ -1,0 +1,11 @@
+---
+import Base from '../../../layouts/Base.astro';
+import CasePage from '../../../components/CasePage.astro';
+import { cases } from '../../../data/cases';
+export function getStaticPaths() {
+  return cases.fa.map((c) => ({ params: { slug: c.slug } }));
+}
+const { slug } = Astro.params;
+const k = cases.fa.find((c) => c.slug === slug)!;
+---
+<Base lang="fa" title={`${k.title} — مریم رجبیان`} description={k.tldr.replace(/⟦[^⟧]*⟧/g, '').trim()}><CasePage lang="fa" slug={slug!} /></Base>

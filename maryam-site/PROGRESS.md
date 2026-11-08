@@ -121,3 +121,6 @@ User folder connected: C:\Users\rajman\Desktop\Maryam CV — commit project file
 
 - Workflow fix: repo root = "Maryam CV" folder (site in /site) → defaults.run.working-directory: site, cache path site/package-lock.json, artifact site/dist; bumped checkout/setup-node v5, upload-pages-artifact v4. Note: repo also contains maryam-site docs + "Claude outputs" (public).
 - Mohsen approved case-study draft structure/tone + confirmed hackathon 10th/74 is their team.
+
+- ✅ LIVE: https://mohsenn1378.github.io/Maryam-CV/ (verified from user browser in Iran: EN/FA load, CV 200, images 200). Cloud proxy blocks github.io so outside-Iran check not done from here.
+- Case pages built: src/data/cases.ts (EN+FA, ⟦⟧ placeholders render as yellow "to fill" marks), components/CasePage.astro, routes /work/[slug] + /fa/work/[slug]; home cards link to them. Verified under /Maryam-CV base: no 404s, no overflow.

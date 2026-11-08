@@ -6,6 +6,8 @@ const cv = u(contact.cv);
 const arts = ['pricing', 'playground', 'agents'] as const;
 const orgs = ['Inboxino', 'MagicalAPI', 'Starcoach'];
 const logos = ['inboxino', 'magicalapi', 'starcoach'];
+const slugs = ['inboxino-pricing', 'magicalapi-playground', 'starcoach-agentic-ai'];
+const caseHref = (i: number) => u(`${lang === 'fa' ? '/fa' : ''}/work/${slugs[i]}/`);
 const slideLabel = (n: number) => (lang === 'fa' ? `اسلاید ${['۱','۲','۳'][n]} از ۳` : `Slide ${n + 1} of 3`);
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -93,7 +95,7 @@ const icon = {
             <span class="meta">{k.meta}</span>
             <h3>{k.title}</h3>
             <p>{k.body} <strong class={s(k.verified)}>{k.num}</strong>{k.after}</p>
-            <span class="more">{c.work.read}<svg class="mirror" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d={icon.arrow}/></svg></span>
+            <a class="more" href={caseHref(i)}>{c.work.read}<svg class="mirror" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d={icon.arrow}/></svg></a>
           </article>
         ))}
       </div>
