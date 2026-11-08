@@ -116,3 +116,8 @@ User folder connected: C:\Users\rajman\Desktop\Maryam CV — commit project file
 - .github/workflows/deploy.yml is PROTECTED on device → delivered as site/deploy-workflow.yml; user must create `.github/workflows/deploy.yml` (GitHub web: Add file › Create new file, paste).
 - Hero v2: large portrait card (4:5, 400px) on the visual side like behnambakhsh.ir; chat card overlaps lower-left; quick-reply chips moved inside chat (now accessible: chat is role=group, typing dots aria-hidden). Placeholder photo = 256px CV crop (circle mask, grey corners) → need real vertical photo from Maryam (≥1200px tall, 4:5, plain bg, shoulders-up).
 - Case study draft v0.1 → content/02-case-studies-draft.md (⟦مریم⟧ markers + question list). Awaiting Mohsen review + Maryam answers before building /work/* pages.
+
+- 2026-11-08: Mohsen published repo maryam-cv on HIS GitHub (to transfer to Maryam later via Transfer ownership), made public, added .github/workflows/deploy.yml via web, set Pages source = Actions. Live URL: (ask).
+
+- Workflow fix: repo root = "Maryam CV" folder (site in /site) → defaults.run.working-directory: site, cache path site/package-lock.json, artifact site/dist; bumped checkout/setup-node v5, upload-pages-artifact v4. Note: repo also contains maryam-site docs + "Claude outputs" (public).
+- Mohsen approved case-study draft structure/tone + confirmed hackathon 10th/74 is their team.
