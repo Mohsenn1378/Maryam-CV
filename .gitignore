@@ -1,0 +1,8 @@
+# Internal notes and drafts — keep out of the public repository
+maryam-site/
+Claude outputs/
+
+# Build output and dependencies
+site/node_modules/
+site/dist/
+site/.astro/
